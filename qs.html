@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js" integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf" crossorigin="anonymous"></script>
+
+    <title>Projeto parte 1</title>
+    <link href="style.css" rel="stylesheet" type="text/css" />
+
+    <style>
+body {
+  background-image: url("https://thumbs.dreamstime.com/z/pizza-seamless-pattern-vector-pizza-pattern-abstract-background-background-useful-restaurant-identity-packaging-89205691.jpg");
+  font-weight:bold;
+}
+
+.responsivo {
+           max-width: auto;
+           width: 728px;
+           height: auto;
+  }
+input[type=text], input[type=password] {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+}
+
+
+button {
+  background-color:  #993300;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: auto;
+}
+
+button:hover {
+  opacity: 0.8;
+}
+
+
+.cancelbtn {
+  width: auto;
+  padding: 10px 18px;
+  background-color: #f44336;
+}
+
+
+.imgcontainer {
+  text-align: center;
+  margin: 24px 0 12px 0;
+  position: relative;
+}
+
+img.avatar {
+  width: 40%;
+  border-radius: 50%;
+}
+
+.container {
+  padding: 16px;
+}
+
+span.psw {
+  float: right;
+  padding-top: 16px;
+}
+
+
+.modal {
+  display: none; /
+  position: fixed;
+  z-index: 1; 
+  left: 0;
+  top: 0;
+  width: 100%; 
+  height: 100%; 
+  overflow: auto; 
+  background-color: rgb(0,0,0); 
+  background-color: rgba(0,0,0,0.4);
+  padding-top: 60px;
+}
+
+
+.modal-content {
+  background-color: #fefefe;
+  margin: 5% auto 15% auto; 
+  border: 1px solid #888;
+  width: 80%; 
+
+
+.close {
+  position: absolute;
+  right: 25px;
+  top: 0;
+  color: #000;
+  font-size: 35px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: red;
+  cursor: pointer;
+}
+
+
+.animate {
+  -webkit-animation: animatezoom 0.6s;
+  animation: animatezoom 0.6s
+}
+
+@-webkit-keyframes animatezoom {
+  from {-webkit-transform: scale(0)} 
+  to {-webkit-transform: scale(1)}
+}
+  
+@keyframes animatezoom {
+  from {transform: scale(0)} 
+  to {transform: scale(1)}
+}
+
+
+@media screen and (max-width: 300px) {
+  span.psw {
+     display: block;
+     float: none;
+  }
+  .cancelbtn {
+     width: 100%;
+  }
+}
+</style>
+
+  </head>
+  <body>
+    
+    <script>
+      
+var modal = document.getElementById('id01');
+
+
+window.onclick = function(event) {
+    if (event.target == modal) {
+        modal.style.display = "none";
+    }
+}
+    </script>
+     <img src="https://cdn.discordapp.com/attachments/754457486236450837/821541561485099008/logo.jpeg "<width:"width=device-width, initial-scale=1">>
+            
+
+
+    <div class="container-fluid">
+      
+      <!-- menu -->
+<button onclick="window.location.href='index.html'"style="width:auto;">Inicio</button>
+<button onclick="window.location.href='sabores.html'"style="width:auto;">Sabores</button>
+<button onclick="window.location.href='qs.html'"style="width:auto;">Quem somos</button>
+<button onclick="window.location.href='contato.html'"style="width:auto;">Contate-nos</button>
+<button onclick="window.location.href='#'"style="width:auto;">Nossa Localização</button>    
+<button onclick="document.getElementById('id01').style.display='block'" style="width:auto; float:right">Login</button>
+<button onclick="window.location.href='carrinho.html'"style="width:auto; float:right">Meu Carrinho</button>
+
+
+<div id="id01" class="modal">
+  
+  <form class="modal-content animate" action="/action_page.php" method="post">
+    <div class="imgcontainer">
+      <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
+      <img src="https://i.pinimg.com/originals/51/f6/fb/51f6fb256629fc755b8870c801092942.png">  <alt="Avatar" class="avatar">
+    </div>
+
+    <div class="container">
+      <label for="uname"><b>Usuário</b></label>
+      <input type="text" placeholder="Digite o nome de usuario" name="uname" required>
+
+      <label for="psw"><b>Senha</b></label>
+      <input type="password" placeholder="Digite a senha" name="psw" required>
+        
+      <button type="submit">Login</button>
+      <label>
+        <input type="checkbox" checked="checked" name="remember"> Lembre-se de mim
+      </label>
+    </div>
+
+    <div class="container" style="background-color:#f1f1f1">
+      <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancelar</button>
+      <span class="psw">Esqueceu a <a href="log.html"> senha?</a></span>
+    </div>
+  </form>
+</div>
+
+      <div class="row">
+        <div class="col-3">
+            
+        </div>
+        
+      </div><!-- linha -->
+
+     <h1><mark>Quem somos:</mark> </h1>
+     <p><mark>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse porta turpis nec interdum blandit. Nam facilisis consequat orci in tristique. Suspendisse orci augue, maximus ac libero a, lobortis interdum dui. Pellentesque in ipsum nec est rhoncus tempor. Vivamus pellentesque ipsum in elit auctor, ac lacinia augue feugiat. Quisque efficitur nisl ut ipsum molestie consectetur. In lobortis finibus lorem eu congue. Nunc consectetur erat commodo, ultricies urna non, elementum risus. Donec at fringilla ligula, vel placerat quam. Aliquam commodo arcu eget urna pharetra, sed cursus nisi commodo. Quisque ornare et erat at scelerisque. Duis urna dolor, hendrerit sit amet ante congue, porttitor rhoncus ex.</mark><br>
+
+<mark>Sed eros dolor, tempus nec pellentesque luctus, aliquet sed felis. Suspendisse commodo lectus enim, non aliquet diam pharetra eget. Praesent at condimentum felis, vitae tristique nulla. Aenean gravida ultricies ligula, a molestie turpis malesuada vitae. Interdum et malesuada fames ac ante ipsum primis in faucibus. Curabitur bibendum nunc tellus, semper commodo nisl condimentum eu. Sed nec volutpat urna, ac venenatis purus. Pellentesque eget nibh quis urna faucibus pretium. Praesent ut dolor lacus.</mark> <br>
+
+<mark>Pellentesque non tincidunt nunc, sed aliquam elit. Aenean aliquet et ipsum vitae commodo. Duis luctus lectus et placerat interdum. Praesent porttitor metus quis rutrum porta. Morbi pretium semper mollis. Curabitur hendrerit interdum convallis. Sed efficitur eu urna ac cursus.</mark> <br>
+
+<mark>Mauris volutpat leo non sem venenatis iaculis. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Praesent non rutrum ligula, in volutpat purus. Suspendisse at mi commodo, dictum eros id, fermentum nulla. Aliquam sollicitudin eu nibh eu suscipit. Vestibulum interdum at libero quis tristique. Nam tincidunt finibus urna. Donec a orci vel tortor gravida maximus nec aliquet urna. Phasellus consectetur leo nisi, at varius metus faucibus ac. Morbi eu purus neque.</mark> <br>
+
+<mark>Interdum et malesuada fames ac ante ipsum primis in faucibus. Nullam malesuada tellus eget lorem convallis mattis. Phasellus bibendum, purus ac volutpat sagittis, nunc enim convallis neque, congue scelerisque justo augue vel lacus. Pellentesque rutrum, libero sit amet molestie rutrum, nibh justo rutrum ipsum, et porta urna purus a mi. Cras mollis, elit hendrerit blandit viverra, nulla odio imperdiet ante, eget convallis felis arcu ac felis. Aenean auctor facilisis orci a convallis. Maecenas pulvinar bibendum massa quis interdum. Pellentesque in dignissim orci.</mark></p>
+      
+    <div class="row">
+       <hr>
+       <small> Todos os direitos reservados </small>
+    </div>
+
+<br><br>
+  </body>
+</html>
